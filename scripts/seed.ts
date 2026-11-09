@@ -19,10 +19,7 @@ const products = [
   {
     slug: "premium-dog-food",
     name: "Premium Dog Food",
-    description: `PRODUCT OVERVIEW
-
-Give your dog a consistent, convenient mealtime routine with Premium Dog Food. Designed as an everyday feeding option, this product is intended for pet parents looking for a straightforward way to organise their dog's daily meals.
-
+    description: `
 WHY CONSIDER THIS PRODUCT?
 
 • Everyday feeding: A practical option to consider when planning your dog's regular meals.
@@ -59,10 +56,7 @@ The exact ingredients, protein and fat percentages, nutritional analysis, feedin
   {
     slug: "puppy-growth-food",
     name: "Puppy Growth Food",
-    description: `PRODUCT OVERVIEW
-
-The early months of a puppy's life are an important time for establishing healthy everyday routines. Puppy Growth Food is positioned as a feeding option for pet parents looking to organise their young dog's meals while paying attention to its changing needs.
-
+    description: `
 WHY CONSIDER THIS PRODUCT?
 
 • Puppy-focused shopping: A convenient category choice when comparing feeding options for young dogs.
@@ -99,10 +93,7 @@ The exact formulation, ingredients, calorie content, nutritional adequacy, recom
   {
     slug: "premium-cat-food",
     name: "Premium Cat Food",
-    description: `PRODUCT OVERVIEW
-
-Make everyday feeding easier with Premium Cat Food, an option for cat owners comparing convenient choices for their cat's regular meals. A suitable diet should account for your cat's age, lifestyle, body condition and individual health needs.
-
+    description: `
 WHY CONSIDER THIS PRODUCT?
 
 • Daily feeding routine: Helps you plan consistent mealtimes for your cat.
@@ -139,10 +130,7 @@ The ingredients, protein levels, taurine content, calorie density, moisture cont
   {
     slug: "interactive-cat-toy",
     name: "Interactive Cat Toy",
-    description: `PRODUCT OVERVIEW
-
-Bring more variety into your cat's daily play routine with the Interactive Cat Toy. Cats often benefit from opportunities to explore, investigate and engage with their surroundings. An interactive toy can provide a dedicated activity for supervised play sessions at home.
-
+    description: `
 WHY CONSIDER THIS TOY?
 
 • Playtime variety: Introduces another activity into your cat's everyday routine.
@@ -179,10 +167,7 @@ The exact design, materials, dimensions, interactive mechanism and age recommend
   {
     slug: "durable-dog-chew-toy",
     name: "Durable Dog Chew Toy",
-    description: `PRODUCT OVERVIEW
-
-Give your dog another option for everyday play with the Durable Dog Chew Toy. Chew toys and play accessories can be part of a dog's activity routine, provided the product is suitable for the dog's size, chewing style and level of supervision.
-
+    description: `
 WHY CONSIDER THIS TOY?
 
 • Everyday play: Adds another activity to your dog's playtime routine.
@@ -219,10 +204,7 @@ The material composition, dimensions, chew-resistance rating and suitability for
   {
     slug: "adjustable-dog-collar",
     name: "Adjustable Dog Collar",
-    description: `PRODUCT OVERVIEW
-
-The Adjustable Dog Collar is an everyday accessory to consider when organising your dog's walking equipment. A properly fitted collar can help keep identification attached to your dog and may be used with compatible walking equipment where appropriate.
-
+    description: `
 WHY CONSIDER THIS ACCESSORY?
 
 • Adjustable fit: Intended to allow fit adjustment within the product's actual size range.
@@ -259,10 +241,7 @@ The collar's exact material, size range, buckle strength, load rating and water 
   {
     slug: "cozy-pet-bed",
     name: "Cozy Pet Bed",
-    description: `PRODUCT OVERVIEW
-
-Create a dedicated resting space for your pet with the Cozy Pet Bed. Having a familiar place to relax can help you organise your pet's everyday environment, whether you place the bed in a quiet corner, a favourite room or another suitable area of your home.
-
+    description: `
 WHY CONSIDER THIS PRODUCT?
 
 • Dedicated resting space: Gives your pet a specific place to settle down.
@@ -332,6 +311,277 @@ The bowl's exact capacity, dimensions, steel grade, base design, dishwasher comp
     category: "Accessories",
     imageUrl:
       "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=900&q=85",
+    isActive: true,
+  },
+
+  {
+    slug: "adult-dog-chicken-food",
+    name: "Adult Dog Chicken Food",
+    description: `WHY CONSIDER THIS PRODUCT?
+
+• Everyday feeding: An additional option to compare when planning your adult dog's regular meals.
+• Routine friendly: Can be incorporated into a consistent feeding schedule.
+• Portion awareness: Follow the feeding guidance printed on the actual package.
+• Individual needs: Choose according to your dog's age, size, activity and health requirements.
+
+HOW TO USE
+
+1. Check the package for ingredients, nutritional information and life-stage suitability.
+2. Follow the manufacturer's feeding chart for your dog's weight.
+3. Introduce dietary changes gradually, following veterinary or package guidance.
+4. Keep fresh drinking water available.
+5. Monitor appetite and digestion after introducing a new food.
+
+IMPORTANT INFORMATION
+
+The exact ingredients, nutritional analysis and suitability of this product have not been independently verified. Confirm all details on the manufacturer's packaging before feeding.`,
+    price: 1099,
+    stock: 32,
+    category: "Dog Food",
+    imageUrl: "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=900&q=85",
+    isActive: true,
+  },
+  {
+    slug: "senior-dog-food",
+    name: "Senior Dog Food",
+    description: `WHY CONSIDER THIS PRODUCT?
+
+• Senior-dog shopping: An option to compare when looking for food intended for older dogs.
+• Feeding routine: Helps organise regular mealtimes.
+• Portion monitoring: Makes it easier to keep track of daily food portions.
+• Individual needs: Older dogs may have specific nutritional or medical requirements.
+
+HOW TO USE
+
+1. Verify the manufacturer's stated age range and nutritional suitability.
+2. Review the feeding instructions and serving guidance on the package.
+3. Transition gradually according to the manufacturer's instructions.
+4. Provide fresh drinking water.
+5. Consult your veterinarian if your dog has age-related health or dietary concerns.
+
+IMPORTANT INFORMATION
+
+The formulation, ingredients and suitability for senior dogs have not been independently verified. Check the packaging and seek veterinary advice before choosing a specialised diet.`,
+    price: 1399,
+    stock: 24,
+    category: "Dog Food",
+    imageUrl: "https://images.unsplash.com/photo-1551717743-49959800b1f6?auto=format&fit=crop&w=900&q=85",
+    isActive: true,
+  },
+  {
+    slug: "kitten-growth-food",
+    name: "Kitten Growth Food",
+    description: `WHY CONSIDER THIS PRODUCT?
+
+• Kitten-focused shopping: An option to compare when planning meals for a young cat.
+• Mealtime routine: Helps establish consistent feeding times.
+• Portion awareness: Follow the package guidance for your kitten's age and weight.
+• Life-stage awareness: Kittens have different nutritional needs from adult cats.
+
+HOW TO SERVE
+
+1. Confirm the manufacturer's recommended age range.
+2. Check whether the food is complete and balanced for kittens.
+3. Follow the feeding chart and transition instructions on the package.
+4. Provide clean, fresh drinking water.
+5. Monitor appetite and digestion.
+
+IMPORTANT INFORMATION
+
+The ingredients, nutritional analysis and suitability for kittens have not been independently verified. Confirm the details on the actual packaging and ask your veterinarian if your kitten has special dietary needs.`,
+    price: 799,
+    stock: 28,
+    category: "Cat Food",
+    imageUrl: "https://images.unsplash.com/photo-1519052537078-e6302a4968d4?auto=format&fit=crop&w=900&q=85",
+    isActive: true,
+  },
+  {
+    slug: "dog-rope-chew-toy",
+    name: "Dog Rope Chew Toy",
+    description: `WHY CONSIDER THIS TOY?
+
+• Playtime variety: Adds another option to your dog's everyday play routine.
+• Interactive play: Can be used for supervised games with your dog.
+• Chewing activity: Offers a designated play object when used appropriately.
+• Routine enrichment: Helps introduce variety into regular play sessions.
+
+HOW TO USE
+
+1. Check the toy for damage before each use.
+2. Choose a size appropriate for your dog's build.
+3. Supervise play, especially when first introducing the toy.
+4. Remove it if threads become loose or pieces detach.
+5. Clean it only according to the manufacturer's care instructions.
+
+IMPORTANT INFORMATION
+
+The material, dimensions and suitability for different chewing styles have not been verified. Supervise use and remove damaged toys promptly to reduce swallowing and choking risks.`,
+    price: 249,
+    stock: 42,
+    category: "Dog Toys",
+    imageUrl: "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?auto=format&fit=crop&w=900&q=85",
+    isActive: true,
+  },
+  {
+    slug: "dog-fetch-ball",
+    name: "Dog Fetch Ball",
+    description: `WHY CONSIDER THIS TOY?
+
+• Active play: An option for supervised fetch and movement-based games.
+• Playtime variety: Helps vary your dog's usual activities.
+• Shared interaction: Can be incorporated into short play sessions.
+• Outdoor activities: Consider it for suitable play areas and conditions.
+
+HOW TO USE
+
+1. Check the ball's size and material before purchase.
+2. Introduce it during a supervised play session.
+3. Choose a safe area away from traffic and other hazards.
+4. Inspect it regularly for cracks, tears or loose pieces.
+5. Remove it if damaged.
+
+IMPORTANT INFORMATION
+
+The ball's exact dimensions, material and chew resistance have not been verified. Select a suitable size and supervise play, particularly with dogs that chew or swallow toys.`,
+    price: 199,
+    stock: 50,
+    category: "Dog Toys",
+    imageUrl: "https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=900&q=85",
+    isActive: true,
+  },
+  {
+    slug: "cat-feather-teaser-toy",
+    name: "Cat Feather Teaser Toy",
+    description: `WHY CONSIDER THIS TOY?
+
+• Interactive play: An option for shared play sessions with your cat.
+• Curiosity and movement: Encourages your cat to follow and investigate a moving toy.
+• Indoor enrichment: Can add variety to an indoor cat's activity routine.
+• Playtime bonding: Offers an opportunity for positive interaction.
+
+HOW TO USE
+
+1. Introduce the toy in a familiar space.
+2. Move it gently and allow your cat to engage at its own pace.
+3. Keep play sessions supervised.
+4. Store it safely after use.
+5. Check regularly for loose feathers, strings or damaged components.
+
+IMPORTANT INFORMATION
+
+The materials, dimensions and construction have not been verified. Do not leave cats unattended with string or detachable components, and remove the toy if damaged.`,
+    price: 179,
+    stock: 38,
+    category: "Cat Toys",
+    imageUrl: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=900&q=85",
+    isActive: true,
+  },
+  {
+    slug: "adjustable-pet-harness",
+    name: "Adjustable Pet Harness",
+    description: `WHY CONSIDER THIS ACCESSORY?
+
+• Walking equipment: An accessory to compare when preparing for outdoor walks.
+• Adjustable design: Intended to allow fit changes within its actual size range.
+• Fit awareness: Encourages careful measurement before purchase.
+• Everyday outings: Can be paired with compatible walking equipment.
+
+HOW TO CHECK THE FIT
+
+1. Measure your pet according to the manufacturer's sizing guide.
+2. Compare the measurements with the product's size chart.
+3. Adjust all straps as instructed.
+4. Check that the harness does not restrict normal movement or breathing.
+5. Inspect buckles, stitching and attachment points before use.
+
+IMPORTANT INFORMATION
+
+The material, size range, fastening strength and fit characteristics have not been verified. Confirm the manufacturer's specifications and supervise your pet while getting used to new walking equipment.`,
+    price: 499,
+    stock: 26,
+    category: "Accessories",
+    imageUrl: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=900&q=85",
+    isActive: true,
+  },
+  {
+    slug: "pet-travel-water-bottle",
+    name: "Pet Travel Water Bottle",
+    description: `WHY CONSIDER THIS ACCESSORY?
+
+• Travel preparation: An accessory to consider when organising outings with your pet.
+• Water access: Intended to make carrying drinking water more convenient.
+• Everyday outings: Can be included in walks and suitable trips.
+• Routine planning: Encourages you to plan for your pet's hydration needs.
+
+HOW TO USE
+
+1. Check the bottle's capacity and operating instructions.
+2. Fill it with clean drinking water before leaving.
+3. Offer water regularly during outings.
+4. Clean and dry it according to the manufacturer's guidance.
+5. Check the lid and seals for leaks before carrying it.
+
+IMPORTANT INFORMATION
+
+The capacity, material, leak resistance and cleaning compatibility have not been verified. Confirm these details with the manufacturer before use.`,
+    price: 399,
+    stock: 34,
+    category: "Accessories",
+    imageUrl: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=900&q=85",
+    isActive: true,
+  },
+  {
+    slug: "pet-walking-leash",
+    name: "Everyday Pet Walking Leash",
+    description: `WHY CONSIDER THIS ACCESSORY?
+
+• Walking routine: An everyday accessory to consider for supervised outings.
+• Handling: Provides a connection point between compatible walking equipment and the handler.
+• Outdoor preparation: Can be included in your regular walk checklist.
+• Fit compatibility: Encourages checking that the leash works with your pet's collar or harness.
+
+HOW TO USE
+
+1. Check the leash length and material specifications.
+2. Attach it to a compatible, properly fitted collar or harness.
+3. Inspect the clasp and stitching before each walk.
+4. Keep your pet under control in public spaces.
+5. Replace the leash if the clasp, stitching or material becomes damaged.
+
+IMPORTANT INFORMATION
+
+The leash length, material, clasp strength and load rating have not been verified. Choose equipment appropriate for your pet and supervise outdoor use.`,
+    price: 299,
+    stock: 40,
+    category: "Accessories",
+    imageUrl: "https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=900&q=85",
+    isActive: true,
+  },
+  {
+    slug: "soft-cushion-pet-bed",
+    name: "Soft Cushion Pet Bed",
+    description: `WHY CONSIDER THIS PRODUCT?
+
+• Resting space: An additional option for creating a comfortable place for your pet.
+• Home routine: Helps establish a familiar spot for relaxation.
+• Placement flexibility: Can be placed in a suitable, quiet area of your home.
+• Size awareness: Encourages checking the dimensions against your pet's resting position.
+
+HOW TO INTRODUCE THE BED
+
+1. Measure your pet while resting in its usual sleeping position.
+2. Compare the measurements with the product dimensions.
+3. Place the bed on a stable, dry surface.
+4. Allow your pet to explore it at its own pace.
+5. Check the bed regularly for damage or loose filling.
+
+IMPORTANT INFORMATION
+
+The dimensions, fabric, filling, washability and support characteristics have not been verified. Check the manufacturer's product details and care label before purchase.`,
+    price: 1199,
+    stock: 18,
+    category: "Pet Bedding",
+    imageUrl: "https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?auto=format&fit=crop&w=900&q=85",
     isActive: true,
   },
 ];

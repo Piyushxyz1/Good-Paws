@@ -24,7 +24,7 @@ const formatPrice = (price: number) =>
   }).format(price);
 
 export default function ProductCard({
-  product,
+  product
 }: {
   product: StoreProduct;
 }) {

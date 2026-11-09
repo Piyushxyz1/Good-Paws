@@ -15,11 +15,23 @@ const nextConfig: NextConfig = {
       },
     },
   },
-  images: {
+ images: {
   remotePatterns: [
     {
       protocol: "https",
       hostname: "images.unsplash.com",
+    },
+    {
+      protocol: "https",
+      hostname: "www.mascobeauty.com",
+    },
+    {
+      protocol: "https",
+      hostname: "pethotel.hkpro.tw",
+    },
+    {
+      protocol: "https",
+      hostname: "juandapetshop.com",
     },
   ],
 },

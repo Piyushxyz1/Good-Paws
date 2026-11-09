@@ -67,9 +67,9 @@ function MenuIcon({ open }: { open: boolean }) {
 const categories = [
   { name: "All Products", href: "/products" },
   { name: "Food & Nutrition", href: "/nutrition" },
-  { name: "Toys & Play", href: "/toys"},
+  { name: "Toys & Play", href: "/toysandplay"},
   { name: "Beds & Comfort", href: "/beds" },
-  { name: "Grooming & Care", href: "/grooming" },
+  { name: "Accessories", href: "/accessories" },
 ];
 
 export default function Navbar() {
@@ -178,7 +178,6 @@ export default function Navbar() {
                     onClick={closeAll}
                     className="flex items-center gap-3 rounded-xl px-3 py-3 text-xs font-semibold text-slate-700 transition hover:bg-teal-50 hover:text-teal-900"
                   >
-                    <span className="text-base">{cat.icon}</span>
                     {cat.name}
                   </Link>
                 ))}
@@ -344,7 +343,6 @@ export default function Navbar() {
                 onClick={closeAll}
                 className="flex items-center gap-3 rounded-xl px-4 py-2.5 text-xs font-semibold text-slate-700 transition hover:bg-teal-50 hover:text-teal-800"
               >
-                <span>{cat.icon}</span>
                 {cat.name}
               </Link>
             ))}

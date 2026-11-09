@@ -43,7 +43,9 @@ export default function CheckoutForm({ amount, user }: CheckoutFormProps) {
 
     try {
       // 1. Load Razorpay SDK script
-      const res = await loadScript("https://checkout.razorpay.com/v1/checkout.js");
+      const res = await loadScript(
+        "https://checkout.razorpay.com/v1/checkout.js",
+      );
       if (!res) {
         alert("Razorpay SDK failed to load. Check your internet connection.");
         setLoading(false);
@@ -73,7 +75,7 @@ export default function CheckoutForm({ amount, user }: CheckoutFormProps) {
         order_id: data.razorpayOrderId,
         handler: async function (response: any) {
           // 4. Verify the payment signature on your backend
-          const verifyRes = await fetch("/api/checkout/verify", {
+          const verifyRes = await fetch("/api/verify", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -101,10 +103,18 @@ export default function CheckoutForm({ amount, user }: CheckoutFormProps) {
         },
       };
 
-      // 5. Open the Razorpay popup modal
+      // 5. Open Razorpay popup and handle payment failure
       const paymentObject = new (window as any).Razorpay(options);
-      paymentObject.open();
 
+      // Handle payment failure
+      paymentObject.on("payment.failed", (response: any) => {
+        console.error("Payment failed:", response.error);
+
+        window.location.href = "/payment-failed";
+      });
+
+      // Open Razorpay Checkout
+      paymentObject.open();
     } catch (error: any) {
       console.error("Checkout error:", error);
       alert(error.message || "An unexpected error occurred during checkout.");
@@ -114,7 +124,10 @@ export default function CheckoutForm({ amount, user }: CheckoutFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-8 bg-white p-7 sm:p-10 shadow-sm border border-stone-200/60">
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-8 bg-white p-7 sm:p-10 shadow-sm border border-stone-200/60"
+    >
       <div>
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-teal-800">
           Step 01

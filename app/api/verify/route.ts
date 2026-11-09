@@ -34,7 +34,7 @@ export async function POST(req: Request) {
       await tx.order.update({
         where: { id: internalOrderId },
         data: {
-          status: "PAID", // Assumes 'PAID' exists in your OrderStatus enum
+          status: "CONFIRMED", // Assumes 'PAID' exists in your OrderStatus enum
           paymentStatus: "SUCCESS",
           paymentId: razorpayPaymentId,
         },
