@@ -5,7 +5,7 @@ import AboutUs from "./AboutUs";
 export const metadata: Metadata = {
   title: "About Us | Goodpaws",
   description:
-    "Discover the story behind Goodpaws — thoughtful essentials, better care, and happier lives for pets and their people.",
+    "Get to know Goodpaws — a pet essentials store bringing together nutrition, toys, accessories and thoughtful everyday care for your furry family.",
 };
 
 function AboutContent() {

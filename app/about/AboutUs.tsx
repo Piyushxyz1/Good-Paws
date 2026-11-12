@@ -5,187 +5,407 @@ import Link from "next/link";
 const values = [
   {
     number: "01",
-    title: "Care comes first",
+    title: "Everyday care matters",
     description:
-      "Every choice starts with the wellbeing of pets. We believe they deserve products selected with care and purpose.",
+      "The little things make a big difference. From daily meals to playtime and comfort, we believe every part of your pet's routine deserves attention.",
   },
   {
     number: "02",
-    title: "Quality over quantity",
+    title: "Thoughtful choices",
     description:
-      "Everyday essentials should be dependable, thoughtfully chosen, and made to be part of a pet's life.",
+      "Finding the right products should feel simple. We bring different pet essentials together so you can explore options that suit your companion's needs.",
   },
   {
     number: "03",
-    title: "Better, together",
+    title: "Pets are family",
     description:
-      "Pet parenthood is a journey. We're here to make everyday moments easier, happier, and more meaningful.",
+      "Every wag, purr, cuddle and playful moment is part of a special bond. We celebrate the love that makes life with pets so meaningful.",
+  },
+];
+
+const categories = [
+  {
+    number: "01",
+    title: "Nutrition & Diets",
+    description:
+      "Everyday food, treats and nutrition essentials to help you explore options for your pet's mealtime routine.",
+    image:
+      "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=900&q=80",
+    alt: "Dog enjoying its meal",
+  },
+  {
+    number: "02",
+    title: "Toys & Play",
+    description:
+      "Playtime favourites that bring a little more fun, activity and excitement into your pet's day.",
+    image:
+      "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?auto=format&fit=crop&w=900&q=80",
+    alt: "Happy dog playing outdoors",
+  },
+  {
+    number: "03",
+    title: "Accessories & Care",
+    description:
+      "Useful everyday accessories and essentials to make outings, routines and time at home more comfortable.",
+    image:
+      "https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?auto=format&fit=crop&w=900&q=80",
+    alt: "Dog enjoying time outdoors",
   },
 ];
 
 export default function AboutUs() {
   return (
-    <main className="overflow-hidden bg-[#faf9f6] text-[#243b38]">
+    <main className="min-h-screen overflow-hidden bg-[#faf9f6] text-slate-800">
+
+      {/* Announcement */}
+      <div className="bg-teal-800 px-4 py-2.5 text-center text-[10px] font-semibold uppercase tracking-[0.22em] text-white sm:text-xs">
+        Thoughtful essentials for your furry family
+      </div>
+
       {/* Hero */}
-      <section className="mx-auto max-w-7xl px-6 pb-20 pt-20 sm:px-10 lg:px-16 lg:pb-28 lg:pt-28">
-        <div className="mx-auto max-w-4xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#78938b]">
-            A little about us
-          </span>
+      <section className="mx-auto max-w-[1440px] px-5 pb-16 pt-12 sm:px-10 sm:pb-24 sm:pt-20 lg:px-16 lg:pt-24">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
 
-          <h1 className="mt-7 text-5xl font-semibold leading-[1.08] tracking-[-0.055em] sm:text-6xl lg:text-8xl">
-            More than products.
-            <span className="mt-2 block font-normal italic text-[#78938b]">
-              A little more love.
+          <div className="relative z-10">
+            <p className="mb-8 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-teal-800 sm:text-xs">
+              <span className="h-px w-9 bg-teal-700" />
+              The story of Goodpaws
+            </p>
+
+            <h1 className="max-w-3xl text-[clamp(3.5rem,7.5vw,7.5rem)] font-black leading-[0.91] tracking-[-0.075em] text-slate-900">
+              Made for
+              <br />
+              the love
+              <br />
+              <span className="font-serif font-normal italic text-teal-700">
+                they give.
+              </span>
+            </h1>
+
+            <div className="mt-9">
+              <p className="max-w-lg text-sm leading-8 text-slate-600 sm:text-base">
+                Some of life's best moments come with four paws, a wagging
+                tail or a gentle purr. At Goodpaws, we celebrate the bond
+                between pets and their people by bringing everyday pet
+                essentials together in one welcoming place.
+              </p>
+
+              <Link
+                href="#our-story"
+                className="group mt-8 inline-flex items-center gap-4 border-b border-teal-700 pb-2 text-xs font-bold uppercase tracking-[0.13em] text-teal-800 transition-all hover:gap-6"
+              >
+                Get to know us
+                <span className="text-base">→</span>
+              </Link>
+            </div>
+
+            <div className="mt-14 flex items-center gap-5 border-t border-stone-300 pt-6">
+              <span className="text-4xl font-black tracking-tight text-slate-900">
+                gp.
+              </span>
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-teal-800">
+                  The Goodpaws philosophy
+                </p>
+                <p className="mt-1 text-xs text-slate-500">
+                  More care in the everyday
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative min-h-[380px] overflow-hidden rounded-2xl sm:min-h-[520px]">
+            <Image
+              src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1200&q=80"
+              alt="Dogs enjoying a happy moment together"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover object-center transition-transform duration-700 hover:scale-105"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+
+            <div className="absolute bottom-6 left-6 rounded-lg bg-[#faf9f6]/90 px-5 py-4 backdrop-blur-md sm:bottom-10 sm:left-10">
+              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-800">
+                For every wag and purr
+              </p>
+              <p className="mt-1 text-xs text-slate-600">
+                A little more love, every day.
+              </p>
+            </div>
+
+            <span className="absolute right-5 top-5 rounded-full bg-white/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-700 backdrop-blur-sm">
+              Goodpaws / About
             </span>
-          </h1>
-
-          <p className="mx-auto mt-8 max-w-2xl text-base leading-8 text-[#71807a] sm:text-lg">
-            We believe pets deserve the very best of everyday life.
-            Goodpaws brings together thoughtful essentials to make
-            caring for your furry family feel a little more special.
-          </p>
-        </div>
-
-        <div className="relative mt-16 h-[340px] overflow-hidden rounded-[2rem] sm:h-[480px] lg:mt-20 lg:h-[590px]">
-          <Image
-            src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b"
-            alt="Two happy dogs enjoying time together outdoors"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
-
-          <div className="absolute inset-0 bg-gradient-to-t from-[#142c27]/35 via-transparent to-transparent" />
-
-          <p className="absolute bottom-7 left-7 max-w-xs text-sm font-medium tracking-wide text-white sm:bottom-10 sm:left-10 sm:text-base">
-            For the ones who make a house feel like home.
-          </p>
+          </div>
         </div>
       </section>
 
       {/* Our Story */}
-      <section className="border-y border-[#e9e8e0] bg-[#f2f1eb]">
-        <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 py-20 sm:px-10 lg:grid-cols-2 lg:gap-24 lg:px-16 lg:py-32">
-          <div>
-            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#78938b]">
-              Our story
-            </span>
+      <section
+        id="our-story"
+        className="scroll-mt-10 border-y border-stone-200 bg-white"
+      >
+        <div className="mx-auto max-w-[1440px] px-5 py-20 sm:px-10 sm:py-28 lg:px-16">
+          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
 
-            <h2 className="mt-6 max-w-xl text-4xl font-semibold leading-[1.12] tracking-[-0.045em] sm:text-5xl lg:text-6xl">
-              It starts with a simple thought.
-              <span className="block font-normal italic text-[#78938b]">
-                They deserve the best.
-              </span>
-            </h2>
-          </div>
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.23em] text-teal-800 sm:text-xs">
+                Where it all comes together
+              </p>
 
-          <div className="space-y-6 text-[15px] leading-8 text-[#71807a] sm:text-base">
-            <p>
-              Pets are never just pets. They're the excited greetings
-              at the door, the quiet company on a difficult day, and
-              the little personalities that make our lives brighter.
-            </p>
+              <h2 className="mt-6 text-4xl font-black leading-[1.05] tracking-[-0.055em] text-slate-900 sm:text-6xl">
+                Life is better
+                <br />
+                with
+                <br />
+                <span className="font-serif font-normal italic text-teal-700">
+                  paws around.
+                </span>
+              </h2>
+            </div>
 
-            <p>
-              At Goodpaws, we believe looking after them should feel
-              just as special. That's why we're building a place for
-              thoughtfully selected pet essentials — from everyday
-              nutrition to playtime favourites and care essentials.
-            </p>
+            <div className="flex flex-col justify-between">
+              <div className="space-y-6 text-sm leading-8 text-slate-600 sm:text-base">
+                <p>
+                  Anyone who shares their life with a pet knows that the
+                  connection goes far beyond words. It's in the excitement
+                  of coming home, the comfort of having them beside you and
+                  the countless little moments that become your favourite
+                  memories.
+                </p>
 
-            <p>
-              Our aim is simple: to help pet parents make choices
-              they feel good about, while making everyday life a
-              little happier for the animals they love.
-            </p>
+                <p>
+                  But being a pet parent also means making everyday choices.
+                  What goes into their food bowl, which toys keep them
+                  entertained, and which accessories make daily routines
+                  easier are all part of caring for them.
+                </p>
+
+                <p>
+                  That's where Goodpaws comes in. We created a place where
+                  pet parents can discover nutrition, toys, accessories and
+                  everyday essentials without having to look in different
+                  places for everything.
+                </p>
+
+                <p>
+                  We want your experience to feel welcoming, convenient
+                  and enjoyable — because finding something special for
+                  the ones you love should be a happy experience too.
+                </p>
+              </div>
+
+              <div className="mt-12 border-t border-stone-200 pt-7">
+                <p className="font-serif text-2xl italic text-teal-700 sm:text-3xl">
+                  "Because they're family, in every way that matters."
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Mission */}
-      <section className="mx-auto max-w-7xl px-6 py-24 text-center sm:px-10 lg:px-16 lg:py-32">
-        <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#78938b]">
-          What we believe
-        </span>
+      {/* Our Purpose */}
+      <section className="mx-auto max-w-[1440px] px-5 py-20 sm:px-10 sm:py-28 lg:px-16">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
 
-        <h2 className="mx-auto mt-7 max-w-4xl text-4xl font-semibold leading-[1.13] tracking-[-0.05em] sm:text-5xl lg:text-7xl">
-          Happier pets.
-          <span className="text-[#78938b]"> Happier people.</span>
-          <br />
-          A better everyday.
-        </h2>
-
-        <p className="mx-auto mt-8 max-w-2xl text-base leading-8 text-[#71807a]">
-          Our mission is to make thoughtful pet care more accessible
-          through products that bring comfort, joy, and quality into
-          the everyday lives of pets and their families.
-        </p>
-      </section>
-
-      {/* Values */}
-      <section className="bg-[#203d37] text-[#faf9f6]">
-        <div className="mx-auto max-w-7xl px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
-          <div className="max-w-2xl">
-            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#a6c1b5]">
-              The Goodpaws promise
-            </span>
-
-            <h2 className="mt-6 text-4xl font-semibold tracking-[-0.045em] sm:text-5xl lg:text-6xl">
-              A few things we'll always stand for.
-            </h2>
+          <div className="relative min-h-[350px] overflow-hidden rounded-xl sm:min-h-[490px]">
+            <Image
+              src="https://images.unsplash.com/photo-1551717743-49959800b1f6?auto=format&fit=crop&w=1100&q=80"
+              alt="Dog enjoying a peaceful outdoor moment"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover transition-transform duration-700 hover:scale-105"
+            />
           </div>
 
-          <div className="mt-16 grid gap-0 md:grid-cols-3">
-            {values.map((value) => (
-              <div
-                key={value.number}
-                className="border-t border-white/20 py-9 md:mr-8 md:pr-8"
-              >
-                <span className="text-sm text-[#a6c1b5]">
-                  {value.number}
-                </span>
+          <div>
+            <p className="text-[10px] font-bold uppercase tracking-[0.23em] text-teal-800 sm:text-xs">
+              Why Goodpaws
+            </p>
 
-                <h3 className="mt-8 text-2xl font-medium tracking-tight">
-                  {value.title}
+            <h2 className="mt-6 text-4xl font-black leading-[1.05] tracking-[-0.055em] text-slate-900 sm:text-6xl">
+              More than a
+              <br />
+              shopping
+              <br />
+              <span className="font-serif font-normal italic text-teal-700">
+                destination.
+              </span>
+            </h2>
+
+            <div className="mt-8 space-y-5 text-sm leading-8 text-slate-600 sm:text-base">
+              <p>
+                We believe shopping for your pet should be about more than
+                simply adding products to a cart. It should help you discover
+                things that fit your companion's personality, preferences
+                and everyday routine.
+              </p>
+
+              <p>
+                From exploring different food options to finding a new
+                playtime favourite or an everyday accessory, Goodpaws brings
+                these different parts of pet care together.
+              </p>
+
+              <p>
+                Our goal is to make discovering pet essentials feel
+                straightforward, so you can spend less time searching
+                and more time enjoying the moments that matter.
+              </p>
+            </div>
+
+            <Link
+              href="/products"
+              className="group mt-9 inline-flex items-center gap-4 border-b border-teal-700 pb-2 text-xs font-bold uppercase tracking-[0.13em] text-teal-800 transition-all hover:gap-6"
+            >
+              Explore our collection
+              <span className="text-base">→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Offer */}
+      <section className="border-y border-stone-200 bg-white">
+        <div className="mx-auto max-w-[1440px] px-5 py-20 sm:px-10 sm:py-28 lg:px-16">
+
+          <div className="mb-14 flex flex-col justify-between gap-6 border-b border-stone-200 pb-9 sm:flex-row sm:items-end">
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.23em] text-teal-800 sm:text-xs">
+                A little something for every paw
+              </p>
+
+              <h2 className="mt-5 text-4xl font-black tracking-[-0.06em] text-slate-900 sm:text-6xl">
+                What you'll find<span className="text-teal-700">.</span>
+              </h2>
+            </div>
+
+            <p className="max-w-sm text-sm leading-7 text-slate-500">
+              Different needs, different personalities, one place to
+              explore. Discover the essentials that make up your pet's
+              everyday world.
+            </p>
+          </div>
+
+          <div className="grid gap-10 md:grid-cols-3">
+            {categories.map((item) => (
+              <article key={item.number} className="group">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-stone-100">
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <span className="absolute left-4 top-4 rounded-full bg-[#faf9f6]/90 px-3 py-1 text-[10px] font-bold tracking-[0.15em] text-teal-800 backdrop-blur-sm">
+                    {item.number}
+                  </span>
+                </div>
+
+                <h3 className="mt-6 text-2xl font-black tracking-[-0.04em] text-slate-900">
+                  {item.title}
                 </h3>
 
-                <p className="mt-4 text-sm leading-7 text-[#c0cec8]">
-                  {value.description}
+                <p className="mt-3 text-sm leading-7 text-slate-500">
+                  {item.description}
                 </p>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Closing CTA */}
-      <section className="mx-auto max-w-5xl px-6 py-24 text-center sm:px-10 lg:py-32">
-        <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[#78938b]">
-          Come be part of it
-        </span>
+      {/* Our Values */}
+      <section className="bg-[#faf9f6]">
+        <div className="mx-auto max-w-[1440px] px-5 py-20 sm:px-10 sm:py-28 lg:px-16">
 
-        <h2 className="mt-6 text-4xl font-semibold leading-tight tracking-[-0.05em] sm:text-6xl">
-          Made for the love
-          <span className="block font-normal italic text-[#78938b]">
-            they give us.
-          </span>
-        </h2>
+          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.23em] text-teal-800 sm:text-xs">
+                The Goodpaws promise
+              </p>
 
-        <p className="mx-auto mt-6 max-w-lg text-base leading-8 text-[#71807a]">
-          Discover thoughtful essentials for every wag, purr,
-          cuddle, and adventure.
-        </p>
+              <h2 className="mt-6 text-4xl font-black leading-[1.05] tracking-[-0.055em] text-slate-900 sm:text-6xl">
+                What matters
+                <br />
+                to us.
+                <br />
+                <span className="font-serif font-normal italic text-teal-700">
+                  Always.
+                </span>
+              </h2>
 
-        <Link
-          href="/products"
-          className="mt-9 inline-flex items-center justify-center rounded-full bg-[#24483f] px-9 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#18372f]"
-        >
-          Explore Goodpaws
-          <span className="ml-3 text-lg">→</span>
-        </Link>
+              <p className="mt-7 max-w-sm text-sm leading-8 text-slate-600">
+                Good pet care is made up of many little things. These are
+                the ideas that shape the way we think about Goodpaws and
+                the experience we want to create.
+              </p>
+            </div>
+
+            <div>
+              {values.map((value) => (
+                <div
+                  key={value.number}
+                  className="grid gap-4 border-t border-stone-300 py-8 sm:grid-cols-[70px_1fr]"
+                >
+                  <span className="font-serif text-lg italic text-teal-700">
+                    {value.number}
+                  </span>
+
+                  <div>
+                    <h3 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
+                      {value.title}
+                    </h3>
+
+                    <p className="mt-3 max-w-xl text-sm leading-7 text-slate-500">
+                      {value.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
+
+      {/* Closing CTA */}
+      <section className="overflow-hidden bg-teal-800 text-white">
+        <div className="mx-auto max-w-[1440px] px-5 py-20 text-center sm:px-10 sm:py-28 lg:px-16">
+
+          <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-teal-200 sm:text-xs">
+            A little more love, every day
+          </p>
+
+          <h2 className="mx-auto mt-7 max-w-4xl text-4xl font-black leading-[1.05] tracking-[-0.06em] sm:text-6xl lg:text-7xl">
+            Their world means
+            <br />
+            <span className="font-serif font-normal italic">
+              everything to you.
+            </span>
+          </h2>
+
+          <p className="mx-auto mt-7 max-w-xl text-sm leading-8 text-teal-50 sm:text-base">
+            Make every meal, playtime and little everyday moment count.
+            Explore Goodpaws and find thoughtful essentials for your
+            furry family.
+          </p>
+
+          <Link
+            href="/products"
+            className="group mt-10 inline-flex items-center gap-5 rounded-full bg-[#faf9f6] px-8 py-4 text-xs font-bold uppercase tracking-[0.14em] text-teal-900 transition-all duration-300 hover:-translate-y-1 hover:bg-white"
+          >
+            Discover Goodpaws
+            <span className="text-base transition-transform group-hover:translate-x-1">
+              →
+            </span>
+          </Link>
+        </div>
+      </section>
+
     </main>
   );
 }
