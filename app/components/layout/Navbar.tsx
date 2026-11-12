@@ -186,7 +186,7 @@ export default function Navbar() {
           </div>
 
           <Link
-            href="/products"
+            href="/about"
             onClick={closeAll}
             className="text-xs font-bold uppercase tracking-[0.15em] text-slate-600 transition hover:text-teal-800"
           >
