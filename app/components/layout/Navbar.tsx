@@ -190,11 +190,11 @@ export default function Navbar() {
             onClick={closeAll}
             className="text-xs font-bold uppercase tracking-[0.15em] text-slate-600 transition hover:text-teal-800"
           >
-            Collection
+            About Us
           </Link>
 
           <Link
-            href="/products?sort=featured"
+            href="/"
             onClick={closeAll}
             className="inline-flex items-center gap-1.5 rounded-full border border-teal-100 bg-teal-50 px-3.5 py-2 text-[11px] font-bold uppercase tracking-[0.15em] text-teal-800 transition hover:bg-teal-100"
           >
