@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/prisma";
-import ToysandPlay from "./ToysandPlay"
+import ToysandPlay from "./ToysandPlay";
 import { Suspense } from "react";
 
 export const metadata = {
@@ -8,13 +8,13 @@ export const metadata = {
     "Explore pet food, toys, accessories and everyday essentials for your furry family.",
 };
 
-export default async function NutritionPage() {
+async function ToysAndPlayContent() {
   const products = await prisma.product.findMany({
     where: {
       isActive: true,
       category: {
-      in: ["Cat Toys", "Dog Toys", "Toys"]
-      } ,
+        in: ["Cat Toys", "Dog Toys", "Toys"],
+      },
     },
     orderBy: {
       createdAt: "desc",
@@ -36,9 +36,13 @@ export default async function NutritionPage() {
     price: Number(product.price),
   }));
 
+  return <ToysandPlay products={catalogProducts} />;
+}
+
+export default function ToysAndPlayPage() {
   return (
-    <Suspense>
-      <ToysandPlay products={catalogProducts} />
+    <Suspense fallback={<div className="min-h-screen bg-[#faf9f6]" />}>
+      <ToysAndPlayContent />
     </Suspense>
   );
 }

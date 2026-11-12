@@ -1,16 +1,18 @@
 
 import Link from "next/link";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Payment Unsuccessful | Goodpaws",
   description: "Your payment could not be completed. Please try again.",
 };
 
-export default function PaymentFailedPage() {
+function PaymentFailedContent() {
   return (
     <main className="min-h-screen bg-[#faf9f6] px-5 py-16 sm:px-8">
       <div className="mx-auto max-w-2xl">
         <div className="border border-stone-200 bg-white px-6 py-14 text-center shadow-sm sm:px-12">
+
           {/* Failure Icon */}
           <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-red-50">
             <svg
@@ -34,7 +36,8 @@ export default function PaymentFailedPage() {
           </p>
 
           <h1 className="mt-3 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
-            Something went wrong<span className="text-teal-700">.</span>
+            Something went wrong
+            <span className="text-teal-700">.</span>
           </h1>
 
           <p className="mx-auto mt-5 max-w-md text-sm leading-7 text-slate-500">
@@ -43,6 +46,7 @@ export default function PaymentFailedPage() {
             issue.
           </p>
 
+          {/* Instructions */}
           <div className="mt-9 border border-stone-200 bg-[#faf9f6] p-5 text-left">
             <h2 className="text-xs font-bold uppercase tracking-wider text-slate-800">
               What should you do?
@@ -67,6 +71,7 @@ export default function PaymentFailedPage() {
             </ul>
           </div>
 
+          {/* Navigation */}
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Link
               href="/cart"
@@ -89,5 +94,17 @@ export default function PaymentFailedPage() {
         </div>
       </div>
     </main>
+  );
+}
+
+export default function PaymentFailedPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-[#faf9f6]" />
+      }
+    >
+      <PaymentFailedContent />
+    </Suspense>
   );
 }

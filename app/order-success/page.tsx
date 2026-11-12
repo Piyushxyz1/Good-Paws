@@ -3,6 +3,7 @@ import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Order Confirmed | Goodpaws",
@@ -23,7 +24,7 @@ function formatPrice(price: number) {
   }).format(price);
 }
 
-export default async function OrderSuccessPage({
+async function OrderSuccessContent({
   searchParams,
 }: OrderSuccessPageProps) {
   const session = await auth();
@@ -49,7 +50,7 @@ export default async function OrderSuccessPage({
     },
   });
 
-  // Never show a success confirmation for an unverified order.
+  // Never show success for an unverified order.
   if (!order) {
     notFound();
   }
@@ -58,6 +59,7 @@ export default async function OrderSuccessPage({
     <main className="min-h-screen bg-[#faf9f6] px-5 py-16 sm:px-8">
       <div className="mx-auto max-w-3xl">
         <div className="border border-stone-200 bg-white px-6 py-12 text-center shadow-sm sm:px-12">
+
           {/* Success Icon */}
           <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-teal-50">
             <svg
@@ -81,7 +83,8 @@ export default async function OrderSuccessPage({
           </p>
 
           <h1 className="mt-3 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
-            Thank you for your order<span className="text-teal-700">.</span>
+            Thank you for your order
+            <span className="text-teal-700">.</span>
           </h1>
 
           <p className="mx-auto mt-4 max-w-lg text-sm leading-7 text-slate-500">
@@ -172,6 +175,7 @@ export default async function OrderSuccessPage({
             </p>
           </div>
 
+          {/* Navigation */}
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Link
               href="/products"
@@ -194,5 +198,19 @@ export default async function OrderSuccessPage({
         </div>
       </div>
     </main>
+  );
+}
+
+export default function OrderSuccessPage({
+  searchParams,
+}: OrderSuccessPageProps) {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-[#faf9f6]" />
+      }
+    >
+      <OrderSuccessContent searchParams={searchParams} />
+    </Suspense>
   );
 }

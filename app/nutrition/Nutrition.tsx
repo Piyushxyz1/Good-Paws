@@ -4,17 +4,9 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ProductCard from "../components/products/ProductCard";
+import { StoreProduct } from "../components/products/ProductCard";
 
-type Product = {
-  id: string;
-  name: string;
-  slug: string;
-  description: string | null;
-  price: number;
-  stock: number;
-  imageUrl: string | null;
-  category: string;
-};
+
 
 type SortOption = "featured" | "price-low" | "price-high" | "name";
 
@@ -82,7 +74,7 @@ function SearchIcon() {
 export default function Nutrition({
   products,
 }: {
-  products: Product[];
+  products: StoreProduct[];
 }) {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");

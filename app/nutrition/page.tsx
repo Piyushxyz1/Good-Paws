@@ -1,3 +1,4 @@
+
 import { prisma } from "@/lib/prisma";
 import Nutrition from "./Nutrition";
 import { Suspense } from "react";
@@ -8,14 +9,13 @@ export const metadata = {
     "Explore pet food, toys, accessories and everyday essentials for your furry family.",
 };
 
-export default async function NutritionPage() {
+async function NutritionContent() {
   const products = await prisma.product.findMany({
     where: {
       isActive: true,
       category: {
-        in: ["Dog Food", "Cat Food"]
-      }
-      
+        in: ["Dog Food", "Cat Food"],
+      },
     },
     orderBy: {
       createdAt: "desc",
@@ -37,9 +37,13 @@ export default async function NutritionPage() {
     price: Number(product.price),
   }));
 
+  return <Nutrition products={catalogProducts} />;
+}
+
+export default function NutritionPage() {
   return (
-    <Suspense>
-      <Nutrition products={catalogProducts} />
+    <Suspense fallback={<div className="min-h-screen bg-[#faf9f6]" />}>
+      <NutritionContent />
     </Suspense>
   );
 }

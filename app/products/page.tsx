@@ -8,7 +8,7 @@ export const metadata = {
     "Discover wholesome pet food, grain-free kibble, wet food, healthy treats, and targeted supplements for your furry family.",
 };
 
-export default async function NutritionPage() {
+async function ProductsContent() {
   const products = await prisma.product.findMany({
     where: {
       isActive: true,
@@ -37,9 +37,13 @@ export default async function NutritionPage() {
     price: Number(product.price),
   }));
 
+  return <ProductCatalog products={catalogProducts} />;
+}
+
+export default function ProductsPage() {
   return (
-    <Suspense>
-      <ProductCatalog products={catalogProducts} />
+    <Suspense fallback={<div className="min-h-screen bg-[#faf9f6]" />}>
+      <ProductsContent />
     </Suspense>
   );
 }

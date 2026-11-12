@@ -1,7 +1,5 @@
 
-
-
-import CartItems from "./CartItems"
+import CartItems from "./CartItems";
 import { Suspense } from "react";
 
 export const metadata = {
@@ -13,16 +11,18 @@ export const metadata = {
   },
 };
 
-export default async function CartPage() {
-  
+async function CartContent() {
+  return <CartItems />;
+}
 
+export default function CartPage() {
   return (
-  
-        <Suspense>
-
-        <CartItems />
-        </Suspense>
-
-   
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-[#faf9f6]" />
+      }
+    >
+      <CartContent />
+    </Suspense>
   );
 }

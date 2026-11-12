@@ -9,11 +9,11 @@ export const metadata = {
     "Explore thoughtfully selected pet accessories, collars, leashes, harnesses, travel essentials and everyday must-haves for your furry family.",
 };
 
-export default async function AccesoriesPage() {
+async function AccessoriesContent() {
   const products = await prisma.product.findMany({
     where: {
       isActive: true,
-      category: "Accessories"
+      category: "Accessories",
     },
     orderBy: {
       createdAt: "desc",
@@ -35,9 +35,13 @@ export default async function AccesoriesPage() {
     price: Number(product.price),
   }));
 
+  return <Accesories products={catalogProducts} />;
+}
+
+export default function AccesoriesPage() {
   return (
     <Suspense fallback={<div className="min-h-screen bg-[#faf9f6]" />}>
-      <Accesories products={catalogProducts} />
+      <AccessoriesContent />
     </Suspense>
   );
 }

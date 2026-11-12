@@ -30,7 +30,7 @@ export default function CartActions({
       const result = await updateCartQuantity(itemId, newQuantity);
 
       if (!result.success) {
-        setError(result.message);
+       setError(result.message ?? "Unable to remove item.");
       }
     });
   }
@@ -42,7 +42,7 @@ export default function CartActions({
       const result = await removeCartItem(itemId);
 
       if (!result.success) {
-        setError(result.message);
+       setError(result.message ?? "Unable to remove item.");
       }
     });
   }

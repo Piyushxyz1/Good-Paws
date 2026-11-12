@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Registration from "./Registration";
+import { Suspense } from "react";
 import AuthForm from "../components/auth/AuthForm";
 
 export const metadata: Metadata = {
@@ -11,6 +11,14 @@ export const metadata: Metadata = {
   },
 };
 
+function RegisterContent() {
+  return <AuthForm mode="register" />;
+}
+
 export default function RegisterPage() {
-  return <AuthForm mode="register"/>
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#faf9f6]" />}>
+      <RegisterContent />
+    </Suspense>
+  );
 }
