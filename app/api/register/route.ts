@@ -14,7 +14,9 @@ const registerSchema = z.object({
     .email()
     .max(254)
     .transform((value) => value.toLowerCase()),
-  password: z.string().min(8).max(72),
+  password: z.string()
+    .min(8, { message: "Password must be at least 8 characters long" })
+    .max(72, { message: "Password must not exceed 72 characters" }),
 });
 
 export async function POST(request: Request) {
