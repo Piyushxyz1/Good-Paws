@@ -26,7 +26,7 @@ Goodpaws is a full-stack pet store web application built with Next.js. It allows
 - **Neon PostgreSQL** – Cloud-hosted relational database
 - **Razorpay** – Payment gateway integration (Test Mode)
 - **Tailwind CSS** – Styling and responsive design
-- **JavaScript** – Application logic
+- **Typescript** – Application logic
 
 ## Database
 
