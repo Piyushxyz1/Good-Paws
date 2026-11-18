@@ -31,15 +31,15 @@ export async function POST(request: Request) {
 
   const parsed = registerSchema.safeParse(body);
 
-  if (!parsed.success) {
-    return NextResponse.json(
-      {
-        message: "Invalid registration details",
-        errors: parsed.error.flatten().fieldErrors,
-      },
-      { status: 400 }
-    );
-  }
+if (!parsed.success) {
+  return NextResponse.json(
+    {
+      message: parsed.error.issues[0].message,
+      errors: parsed.error.flatten().fieldErrors,
+    },
+    { status: 400 }
+  );
+}
 
   const { name, email, password } = parsed.data;
 
